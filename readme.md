@@ -10,7 +10,6 @@ https://github.com/andreyka101/Server---basic-nodeJS-express
 ``` bash
 npm i ts-node
 ```
-
 ``` bash
 npm i typescript
 ```
