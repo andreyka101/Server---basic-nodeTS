@@ -15,4 +15,8 @@ npm install -D ts-node
 npm install -D typescript
 ```
 
+``` bash
+npm install -D tslib @types/node
+```
+
 
