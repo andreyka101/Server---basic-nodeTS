@@ -6,12 +6,13 @@
 https://github.com/andreyka101/Server---basic-nodeJS-express
 ```
 
-после этого пишем в терминале
+после этого пишем в терминале:
 ``` bash
-npm i ts-node
+npm install -D ts-node
 ```
+
 ``` bash
-npm i typescript
+npm install -D typescript
 ```
 
 
