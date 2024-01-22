@@ -19,4 +19,16 @@ npm install -D typescript
 npm install -D tslib @types/node
 ```
 
+теперь создаём файл
+
+``` bash
+app.ts
+```
+
+и в него для проверки пишем
+
+``` bash
+console.log("hello world")
+```
+
 
