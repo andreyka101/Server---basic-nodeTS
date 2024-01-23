@@ -21,7 +21,16 @@ nodemon.json
 в него нужно вписать 
 
 ``` bash
-фыв
+{
+    "watch": [
+        "./*"
+    ],
+    "ext":"ts",
+    "ignore":[
+        "./**/*.spec.ts"
+    ],
+    "exec": "node -r tsconfig.json-paths/register -r ts-node/register app.ts"
+}
 ```
 
 после этого пишем в терминале:
