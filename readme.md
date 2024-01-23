@@ -1,9 +1,27 @@
 # создание сервера nodeTS
 
-сначала нужно сделать сервер nodeJS
+сначала нужно сделать сервер nodeJS и подключить к нему express
 
 ``` bash
 https://github.com/andreyka101/Server---basic-nodeJS-express
+```
+
+подключить nodemon
+
+``` bash
+npm i nodemon
+```
+
+создать файл
+
+``` bash
+nodemon.json
+```
+
+в него нужно вписать 
+
+``` bash
+фыв
 ```
 
 после этого пишем в терминале:
@@ -19,6 +37,10 @@ npm install -D typescript
 npm install -D tslib @types/node
 ```
 
+``` bash
+npm i --save-dev @types/express
+```
+
 создаём файл
 
 ``` bash
@@ -29,28 +51,30 @@ tsconfig.json
 
 ``` bash
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src"]
-}
+    "compilerOptions": {
+      "strict": true,
+      "module": "ES2020",
+      "moduleResolution": "Node",
+      "target": "ES2017",
+      "lib": ["ESNext"],
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "baseUrl": ".",
+      "paths": {
+        "@/": ["./*"]
+      }
+    },
+    "ts-node": {
+        "transpileOnly": true,
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+  }
 ```
 
 теперь создаём файл
