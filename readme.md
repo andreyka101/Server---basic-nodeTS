@@ -18,26 +18,7 @@ npm i express
 npm install --save-dev nodemon
 ```
 
-создать файл
-
-``` bash
-nodemon.json
-```
-
-в него нужно вписать 
-
-``` bash
-{
-    "watch": [
-        "./*"
-    ],
-    "ext":"ts",
-    "ignore":[
-        "./**/*.spec.ts"
-    ],
-    "exec": "node -r tsconfig.json-paths/register -r ts-node/register app.ts"
-}
-```
+___
 
 после этого пишем в терминале:
 ``` bash
@@ -56,42 +37,6 @@ npm install -D tslib @types/node
 npm i --save-dev @types/express
 ```
 
-создаём файл
-
-``` bash
-tsconfig.json
-```
-
-в него пишем
-
-``` bash
-{
-    "compilerOptions": {
-      "strict": true,
-      "module": "ES2020",
-      "moduleResolution": "Node",
-      "target": "ES2017",
-      "lib": ["ESNext"],
-      "skipLibCheck": true,
-      "esModuleInterop": true,
-      "baseUrl": ".",
-      "paths": {
-        "@/": ["./*"]
-      }
-    },
-    "ts-node": {
-        "transpileOnly": true,
-        "compilerOptions": {
-            "module": "CommonJS"
-        }
-    },
-    "exclude": [
-        "node_modules",
-        "**/*.spec.ts"
-    ]
-  }
-```
-
 теперь создаём файл
 
 ``` bash
@@ -101,7 +46,30 @@ app.ts
 и в него для проверки пишем
 
 ``` bash
-console.log("hello world")
+import express from 'express'
+const app = express()
+
+app.get('/', function (req, res) {
+  console.log(req)
+
+  res.send('Hello World')
+})
+
+app.listen(3700)
 ```
 
+всё
 
+<br/>
+
+для запуска в консоле пишим
+
+``` bash
+npx nodemon app.ts
+```
+
+для запуска в scripts (сценарии npm) пишим
+
+``` bash
+"dev": "nodemon app.ts",
+```
