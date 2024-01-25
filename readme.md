@@ -1,15 +1,21 @@
 # создание сервера nodeTS
 
-сначала нужно сделать сервер nodeJS и подключить к нему express
+сначала нужно сделать сервер nodeJS
 
 ``` bash
-https://github.com/andreyka101/Server---basic-nodeJS-express
+npm init
+```
+
+подключаем express
+
+``` bash
+npm i express
 ```
 
 подключить nodemon
 
 ``` bash
-npm i nodemon
+npm install --save-dev nodemon
 ```
 
 создать файл
