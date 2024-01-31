@@ -1,6 +1,6 @@
 # создание сервера nodeTS
 
-сначала нужно сделать сервер nodeJS
+сначала нужно сделать [сервер nodeJS](https://github.com/andreyka101/Server---basic-nodeJS-express)
 
 ``` bash
 npm init
